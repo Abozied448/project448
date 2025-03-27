@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> login </title>
+<style>
+  body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/pizza.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            z-index: -9999;
+            height: 100vh;
+        }
+
+   #login {
+            top: 5%;
+            position: relative;
+            max-width: 350px;
+            border-radius: 20px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 40px;
+            color: #fff;
+            box-sizing: border-box;
+            z-index: 999;
+        }
+    
+        h2 {
+            text-align: center;
+        }
+        input[type=text],
+       
+        input[type=password] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: rgba(0, 0, 0, 0.10);
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+input[type=submit] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border-radius: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+    
+        input[type=submit]:hover {
+            background: linear-gradient(to left, #ff105f, #ffad06);
+        }
+</style>
+</head>
+<body>
+    
+<div id="login">
+     <h2>logIn</h2>
+    <form onsubmit="redirectToHome(event)">
+        <input class="" type="text" name="name" value="" placeholder="Name" required>
+        <input class="" type="password" name="cpassword" value="" placeholder="Enter Password" required>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <p style="text-align: center; margin-top: 10px; color: #fff;">Don't have an account? <a href="reg.html" style="color: #ffad06;">Sign Up</a></p>
+</div>
+
+<script>
+    function redirectToHome(event) {
+        event.preventDefault(); // يمنع الإرسال الافتراضي للنموذج
+        window.location.href = "index.html"; // توجيه إلى الصفحة الرئيسية
+    }
+</script>
+
+</body>
+</html>
